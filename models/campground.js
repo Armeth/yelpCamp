@@ -8,6 +8,10 @@ const CampgroundSchema = new Schema({
     price: Number,
     description: String,
     location: String,
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     //need to store the review ids in the campground model
     //ref is the review model; an object ID from a "Review" model.
     //route to be defined and a form for a new review.
